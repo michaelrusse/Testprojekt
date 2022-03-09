@@ -78,6 +78,13 @@ public class DepotTest {
 		var result = cut.size();
 		assertTrue(result == 2);
 	}
+	
+	@Test
+	void Depot_sice_Test2() {
+		var result = cut.size();
+		assertTrue(result == 0);
+	}
+
 
 // Erwartetes Ergebnis: IBAN des zweiten Datensatz entspricht dem eingegeben.
 	@Test
@@ -86,7 +93,8 @@ public class DepotTest {
 		cut.add( new EntityIBAN(2 , "DE12346"));	
 		assertEquals("DE12346", cut.get(1).getIban());
 	}
-	
+
+//Erwartetes Ergebnis: IBAN des ersten Datensatz entspricht dem eingegeben.	
 	@Test
 	void Depot_get_test2() throws OwnException {
 		cut.add( new EntityIBAN(1 , "DE12345"));
